@@ -38,7 +38,7 @@ if (!isset($_SESSION['username'])) {
 							    <li><a class="dropdown-item" href="add_stu.php">Add Student</a></li>
 							    <li><a class="dropdown-item" href="stu_details.php">Student's Details</a></li>
 							    <li><a class="dropdown-item" href="allStudents.php">All Students' Details</a></li>
-							    <li><a class="dropdown-item" href="#">Exam Details</a></li>
+							    <!--<li><a class="dropdown-item" href="#">Exam Details</a></li>-->
 							  </ul>
 						</li>
 				        <li class="nav-item dropdown">
