@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2023 at 11:43 AM
+-- Generation Time: May 22, 2023 at 07:11 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -29,15 +29,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `login` (
   `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `name` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`username`, `password`) VALUES
-('admin', 'admin123');
+INSERT INTO `login` (`username`, `password`, `name`) VALUES
+('admin', '$2y$10$9/hCOpEAx9FXBShHdL58N.w02yU7hss/i6VAllZX28sOJyYwuqGea', 'Maleesha Udan'),
+('admin1', '$2y$10$DwXuW.6kWKufC.aORFMlhOOCzStfofq5fP1vuYtUOOEEbArfhDq..', 'Ishan Ekanayaka'),
+('admin2', '$2y$10$WSHjXFjSG4.L1RuOf4C61.EvnDeHGE4ALdTIt9ITrXlH.y2CBStvy', 'Menuka Jayaweera');
 
 -- --------------------------------------------------------
 
@@ -97,10 +100,6 @@ INSERT INTO `staff` (`lecId`, `fname`, `sname`, `gender`, `address`, `dob`, `ema
 ('LEC000020', 'Daniel', 'Taylor', 'Male', '753 Elm Street', '1977-02-28', 'danieltaylor@example.com', '555-3456', '234-56-7890', 'Yet Another University', 'Bachelor of Science'),
 ('LEC000021', 'Catherine', 'Brown', 'Female', '456 Pine Street', '1982-09-12', 'catherinebrown@example.com', '555-4567', '345-67-8901', 'Example University', 'Bachelor of Science'),
 ('LEC000022', 'J SMITH', 'JAMES SMITH', 'Male', 'MAITHRIPALA SENANAYAKE MAWATHA', '2023-03-28', 'jsmith1256@gmail.com', '0754224225', '981942157V', 'RUHUNA', 'IT');
-
---
--- Triggers `staff`
---
 
 -- --------------------------------------------------------
 
@@ -163,12 +162,12 @@ INSERT INTO `subjects` (`subject_code`, `year_of_study`, `semester`, `subject_na
 ('IT1134', '1', 1, 'Fundamentals of programming ', 4),
 ('IT1144', '1', 1, 'Fundamentals of web programming  ', 4),
 ('IT1152', '1', 1, 'Essentials of Statistics ', 2),
-('IT1262', '1', 2, 'Mathematics for Computing', 3),
 ('IT1214', '1', 2, 'Object Oriented Design  and Programming ', 4),
 ('IT1223 ', '1', 2, 'Database  Management Systems', 3),
 ('IT1232', '1', 2, 'Project Management ', 2),
 ('IT1242', '1', 2, 'Principles of Computer Networks', 2),
 ('IT1252', '1', 2, 'Electronics and Device  Interfacing ', 2),
+('IT1262', '1', 2, 'Mathematics for Computing', 3),
 ('IT2114', '2', 1, 'Data Structures  ', 4),
 ('IT2122', '2', 1, 'Software Engineering ', 2),
 ('IT2133', '2', 1, 'Advanced Web Programming', 3),
