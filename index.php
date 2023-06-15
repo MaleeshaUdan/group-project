@@ -34,8 +34,9 @@ session_destroy();
 				</div>
 			<?php endif; ?>
              <form id="login" action="php/login.php" method="post" onsubmit="return validateForm()">
+			  <h2 class="fw-bold mb-2 text-uppercase">Faculty of Applied Science</h2>
               <h2 class="fw-bold mb-2 text-uppercase">University of vavuniya</h2>
-              <h5 class="fw-bold mb-2 text-uppercase">University management system</h5>
+              <h5 class="fw-bold mb-2 text-uppercase">Student Information Management System</h5>
               <h6 class="fw-bold mb-2 text-uppercase">Admin Login Page</h6>
               <p class="text-white-50 mb-5">Please enter your login and password!</p>
               <div class="form-outline form-white mb-4">

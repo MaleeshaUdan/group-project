@@ -45,6 +45,12 @@ INSERT INTO `login` (`username`, `password`) VALUES
 -- Table structure for table `nonacstaff`
 --
 
+
+
+
+
+
+
 CREATE TABLE `nonacstaff` (
   `stfId` varchar(10) NOT NULL,
   `firstName` varchar(50) NOT NULL,
@@ -98,12 +104,7 @@ INSERT INTO `staff` (`lecId`, `fname`, `sname`, `gender`, `address`, `dob`, `ema
 ('LEC000021', 'Catherine', 'Brown', 'Female', '456 Pine Street', '1982-09-12', 'catherinebrown@example.com', '555-4567', '345-67-8901', 'Example University', 'Bachelor of Science'),
 ('LEC000022', 'J SMITH', 'JAMES SMITH', 'Male', 'MAITHRIPALA SENANAYAKE MAWATHA', '2023-03-28', 'jsmith1256@gmail.com', '0754224225', '981942157V', 'RUHUNA', 'IT');
 
---
--- Triggers `staff`
---
-
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `student`
 --
@@ -137,71 +138,79 @@ INSERT INTO `student` (`nic`, `full_name`, `sname`, `gender`, `address`, `dob`, 
 --
 -- Table structure for table `subjects`
 --
-
 CREATE TABLE `subjects` (
   `subject_code` varchar(10) NOT NULL,
   `year_of_study` varchar(3) NOT NULL,
   `semester` int(2) NOT NULL,
   `subject_name` varchar(200) NOT NULL,
-  `number_of_credits` int(3) NOT NULL
+  `number_of_credits` int(3) NOT NULL,
+  `subject_type` varchar(10) NOT NULL,
+  PRIMARY KEY (`subject_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 --
 -- Dumping data for table `subjects`
 --
 
-INSERT INTO `subjects` (`subject_code`, `year_of_study`, `semester`, `subject_name`, `number_of_credits`) VALUES
-('ACU1113', '1', 1, 'English  Language 1', 0),
-('ACU1212', '1', 2, 'Social Harmony  and Active  Citizenship ', 0),
-('ACU2113', '2', 1, 'English  Language 11', 0),
-('ACU2212', '2', 2, 'Communication  and Soft Skills', 0),
-('ACU3112', '3', 1, 'Career Guidance ', 0),
-('ACU3212', '3', 2, 'Management and Entrepreneurial  Skills  ', 0),
-('ACU3222', '3', 2, 'Research  Methodology  and Scientific  Writing ', 0),
-('IT1113', '1', 1, 'Fundamentals of Information Technology', 3),
-('IT1122', '1', 1, 'Foundation of Mathematics  ', 2),
-('IT1134', '1', 1, 'Fundamentals of programming ', 4),
-('IT1144', '1', 1, 'Fundamentals of web programming  ', 4),
-('IT1152', '1', 1, 'Essentials of Statistics ', 2),
-('IT1262', '1', 2, 'Mathematics for Computing', 3),
-('IT1214', '1', 2, 'Object Oriented Design  and Programming ', 4),
-('IT1223 ', '1', 2, 'Database  Management Systems', 3),
-('IT1232', '1', 2, 'Project Management ', 2),
-('IT1242', '1', 2, 'Principles of Computer Networks', 2),
-('IT1252', '1', 2, 'Electronics and Device  Interfacing ', 2),
-('IT2114', '2', 1, 'Data Structures  ', 4),
-('IT2122', '2', 1, 'Software Engineering ', 2),
-('IT2133', '2', 1, 'Advanced Web Programming', 3),
-('IT2143', '2', 1, 'Visual Programming ', 3),
-('IT2153', '2', 1, 'Computer Graphics ', 3),
-('IT2212', '2', 2, 'Management Information Systems ', 2),
-('IT2223', '2', 2, 'Design and Analysis of Algorithms ', 2),
-('IT2234', '2', 2, 'Web Services and Server  Technologies ', 4),
-('IT2244', '2', 2, 'Operating Systems ', 4),
-('IT2252', '2', 2, 'Social  and Professional Issues in IT ', 2),
-('IT3113', '3', 1, 'Knowledge Based Systems and Logic Programming ', 3),
-('IT3122', '3', 1, 'Computer Security ', 2),
-('IT3133', '3', 1, 'Mobile Communication  and Computing  ', 3),
-('IT3143', '3', 1, 'Digital Image Processing ', 3),
-('IT3152', '3', 1, 'Software Quality Assurance ', 2),
-('IT3162', '3', 1, 'Group  Project ', 2),
-('IT3213', '3', 2, 'Human Computer Iteraction ', 3),
-('IT3223', '3', 2, 'Advanced Database Management Systems ', 3),
-('IT3232', '3', 2, 'E-Commerce ', 2),
-('IT3243', '3', 2, 'Parallel Computing ', 3),
-('IT3252', '3', 2, 'Multimedia  Computing ', 2),
-('IT3262', '3', 2, 'Operations Research ', 2),
-('IT4113', '4', 1, 'Computer  Organisation  and Architecture ', 3),
-('IT4123', '4', 1, 'Agent Based Computing ', 3),
-('IT4133', '4', 1, 'Bioinformatics and Computational  Biology  ', 3),
-('IT4142', '4', 1, 'Compiler Design ', 2),
-('IT4153', '4', 1, 'Advanced Computer Networks', 3),
-('IT4216', '4', 2, 'Research Project  ', 6),
-('IT4226', '4', 2, 'Industrial Training ', 6);
+INSERT INTO `subjects` (`subject_code`, `year_of_study`, `semester`, `subject_name`, `number_of_credits`, `subject_type`) VALUES
+('AMC101', '1', 1, 'Mathematics I', 4, 'Math'),
+('ENC101', '1', 1, 'Biology I', 3, 'Bio'),
+('CSC101', '1', 1, 'Introduction to Programming', 3, 'IT'),
+('AMC201', '2', 1, 'Mathematics II', 4, 'Math'),
+('ENC201', '2', 1, 'Biology II', 3, 'Bio'),
+('CSC201', '2', 1, 'Data Structures', 3, 'IT'),
+('AMC301', '3', 1, 'Mathematics III', 4, 'Math'),
+('ENC301', '3', 1, 'Genetics', 3, 'Bio'),
+('CSC301', '3', 1, 'Database Management', 3, 'IT'),
+('AMC401', '4', 1, 'Mathematics IV', 4, 'Math'),
+('ENC401', '4', 1, 'Biotechnology', 3, 'Bio'),
+('CSC401', '4', 1, 'Software Engineering', 3, 'IT'),
+('AMC102', '1', 2, 'Mathematics II', 4, 'Math'),
+('ENC102', '1', 2, 'Biology II', 3, 'Bio'),
+('CSC102', '1', 2, 'Web Development', 3, 'IT'),
+('AMC202', '2', 2, 'Mathematical Methods', 4, 'Math'),
+('ENC202', '2', 2, 'Cell Biology', 3, 'Bio'),
+('CSC202', '2', 2, 'Object-Oriented Programming', 3, 'IT'),
+('AMC302', '3', 2, 'Mathematical Statistics', 4, 'Math'),
+('ENC302', '3', 2, 'Ecology', 3, 'Bio'),
+('CSC302', '3', 2, 'Computer Networks', 3, 'IT'),
+('AMC402', '4', 2, 'Complex Analysis', 4, 'Math'),
+('ENC402', '4', 2, 'Microbiology', 3, 'Bio'),
+('CSC402', '4', 2, 'Artificial Intelligence', 3, 'IT');
+
+
+
+
+
+
 
 --
 -- Indexes for dumped tables
 --
+
+-- Create the 'exams' table
+CREATE TABLE `exams` (
+  `reg_number` varchar(20) NOT NULL,
+  `department` varchar(20) NOT NULL,
+  `year_of_study` varchar(3) NOT NULL,
+  `subject_code` varchar(10) NOT NULL,
+  `subject_type` varchar(10) NOT NULL,
+  `theory_marks` int,
+  `practical_marks` int,
+  `theory_ica01_marks` int,
+  `theory_ica02_marks` int,
+  `theory_ica03_marks` int,
+  `practical_ica01_marks` int,
+  `practical_ica02_marks` int,
+  `practical_ica03_marks` int,
+  `theory_grade` varchar(5),
+  `practical_grade` varchar(5),
+  `overall_grade` varchar(5),
+  `gpa` decimal(4,2),
+  PRIMARY KEY (`reg_number`, `subject_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 --
 -- Indexes for table `login`
@@ -232,9 +241,62 @@ ALTER TABLE `student`
 --
 -- Indexes for table `subjects`
 --
+
+
+ALTER TABLE `student`
+  ADD UNIQUE (`reg_number`);
+
 ALTER TABLE `subjects`
-  ADD PRIMARY KEY (`subject_code`);
-COMMIT;
+  ADD UNIQUE (`subject_code`);
+
+
+-- Add foreign key references to the 'exams' table
+ALTER TABLE `exams`
+  ADD CONSTRAINT `fk_exams_student`
+    FOREIGN KEY (`reg_number`)
+    REFERENCES `student` (`reg_number`)
+    ON DELETE CASCADE,
+  ADD CONSTRAINT `fk_exams_subjects`
+    FOREIGN KEY (`subject_code`)
+    REFERENCES `subjects` (`subject_code`)
+    ON DELETE CASCADE;
+
+
+DELIMITER //
+
+CREATE TRIGGER update_subject_type
+BEFORE INSERT ON exams
+FOR EACH ROW
+BEGIN
+    SET NEW.subject_type = (SELECT subject_type FROM subjects WHERE subject_code = NEW.subject_code);
+END//
+
+DELIMITER ;
+
+
+
+ALTER TABLE exams ADD COLUMN `semester` varchar(10) NOT NULL;
+
+DELIMITER //
+
+CREATE TRIGGER update_semester
+BEFORE INSERT ON exams
+FOR EACH ROW
+BEGIN
+    SET NEW.semester = CASE
+        WHEN NEW.subject_code LIKE '1%' THEN 'Semester 1'
+        WHEN NEW.subject_code LIKE '2%' THEN 'Semester 2'
+        -- Add more cases for other semesters if needed
+        ELSE 'Unknown Semester'
+    END;
+END //
+
+DELIMITER ;
+
+
+
+
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
