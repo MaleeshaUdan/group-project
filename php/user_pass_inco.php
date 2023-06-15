@@ -17,7 +17,7 @@
                 <p class="lead">
                     Please Try Again!
                   </p>
-                <a href="/index.php" class="btn btn-primary">Go to the Login Page</a>
+                <a href="\Backup 09\index.php" class="btn btn-primary">Go to the Login Page</a>
             </div>
         </div>
     </body>

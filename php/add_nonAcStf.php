@@ -37,7 +37,7 @@
 <body>
 	<div class="container mt-3">
   		<div class="mt-4 p-5 bg-primary text-white rounded">
-    		<h3>Add Academic Staff Details</h3>    
+    		<h3>Add Non Academic Staff Details</h3>    
   		</div>
 	</div>
 	<br/>

@@ -20,7 +20,8 @@ if (!isset($_SESSION['username'])) {
 	<div class="container-fluid m-0">
 	  	<div class="m-0 p-5 bg-primary text-white rounded">
 	    	<h1>User Dashboard</h1> 
-	    	<p>Students Management System of the University of Vavuniya</p> 
+	    	<p>Students Information Management System for Faculty of Applied Science</p> 
+			<p> University of Vavuniya</p>
 	  	</div>
 	</div>
 
@@ -38,9 +39,18 @@ if (!isset($_SESSION['username'])) {
 							    <li><a class="dropdown-item" href="add_stu.php">Add Student</a></li>
 							    <li><a class="dropdown-item" href="stu_details.php">Student's Details</a></li>
 							    <li><a class="dropdown-item" href="allStudents.php">All Students' Details</a></li>
-							    <li><a class="dropdown-item" href="#">Exam Details</a></li>
 							  </ul>
 						</li>
+						
+						<li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">	Exams</a>
+							  <ul class="dropdown-menu">
+							    <li><a class="dropdown-item" href="exam_details.php">Add Exam Details</a></li>
+							    <li><a class="dropdown-item" href="stu_exam_details.php">Student's Exam Details</a></li>
+							    <li><a class="dropdown-item" href="all_stu_details.php">All Students' Exam Details</a></li>
+							  </ul>
+						</li>
+						
 				        <li class="nav-item dropdown">
 							  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Academic Staff</a>
 							  <ul class="dropdown-menu">

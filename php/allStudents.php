@@ -79,7 +79,7 @@
 			    <div class="col-md-6 mb-3 mt-3">
 			        <label for="acyear" class="form-label was-validated">Academic Year</label>
 			        <select class="form-select" id="acyear" name="acyear" required>
-			        		<option value="">Select Academic Year</option>
+			        		<option value="" selected disabled hidden>Select Academic Year</option>
 			            	<option value="2018/2019">2018/2019</option>
 					        <option value="2019/2020">2019/2020</option>
 					        <option value="2020/2021">2020/2021</option>
@@ -97,7 +97,7 @@
 			    <div class="col-md-6 mb-3 mt-3">
 			        <label for="faculty" class="form-label was-validated">Faculty</label>
 			        <select class="form-select" id="faculty" name="faculty" required>
-			            <option value="">Select the Faculty</option>
+			            <option value="" selected disabled hidden>Select the Faculty</option>
 			            <option value="Applied Science">Applied Science</option>
 			        </select>
 			    </div>
