@@ -11,7 +11,7 @@
 	if (mysqli_num_rows($result)) {
 		
 			$_SESSION['username'] = $username;
-   			header("Location: add_stu.php");//change header redirecting page
+   			header("Location: landing_page.php");//change header redirecting page
     		exit();
 
 	} else {

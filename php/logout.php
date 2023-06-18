@@ -6,6 +6,6 @@ $_SESSION = array();
 session_destroy();
 
 // Redirect to index.php
-header("Location: /index.php");
+header("Location: \Backup 09\index.php");
 exit();
 ?>

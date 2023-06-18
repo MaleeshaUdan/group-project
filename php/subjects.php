@@ -73,7 +73,7 @@
 			    <div class="col-md-6 mb-3 mt-3">
 			        <label for="year" class="form-label was-validated">Year of Study</label>
 			        <select class="form-select" id="year" name="year" required>
-			            <option value="">Select Year</option>
+			            <option value="" selected disabled hidden>Select Year</option>
 			            <option value="1">First Year</option>
 			            <option value="2">Second Year</option>
 			            <option value="3">Third Year</option>
@@ -83,7 +83,7 @@
 			    <div class="col-md-6 mb-3 mt-3">
 			        <label for="semester" class="form-label was-validated">Semester</label>
 			        <select class="form-select" id="semester" name="semester" required>
-			            <option value="">Select Semester</option>
+			            <option value="" selected disabled hidden>Select Semester</option>
 			            <option value="1">First Semester</option>
 			            <option value="2">Second Semester</option>
 			        </select>

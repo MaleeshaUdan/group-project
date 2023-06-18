@@ -5,7 +5,7 @@
     $last_id = 'STF000009';
 
     // Get the last recorded stfId from the nonAcStaff table
-    $query = "SELECT stfId FROM nonAcStaff ORDER BY stfId DESC LIMIT 1";
+    $query = "SELECT stfId FROM nonacstaff ORDER BY stfId DESC LIMIT 1";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_assoc($result);
     if ($row) {
